@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for game_logics/heros/knight.ts</title>
+    <title>Code coverage report for game_logics/heros/archer.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">game_logics/heros</a> knight.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">game_logics/heros</a> archer.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/8</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/8</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -73,34 +73,25 @@
 <a name='L8'></a><a href='#L8'>8</a>
 <a name='L9'></a><a href='#L9'>9</a>
 <a name='L10'></a><a href='#L10'>10</a>
-<a name='L11'></a><a href='#L11'>11</a>
-<a name='L12'></a><a href='#L12'>12</a>
-<a name='L13'></a><a href='#L13'>13</a>
-<a name='L14'></a><a href='#L14'>14</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L11'></a><a href='#L11'>11</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {HeroBase} from "../herobase";
-export class Knight extends HeroBase {
-<span class="fstat-no" title="function not covered" >    constructor(n</span>ame :string ,public <span class="cstat-no" title="statement not covered" >armour :number)</span> {
-<span class="cstat-no" title="statement not covered" >        super(name, 200, 10);</span>
-<span class="cstat-no" title="statement not covered" >        this.armour = 40;</span>
+&nbsp;
+export class Archer extends HeroBase {
+    constructor(name :string) {
+        super(name, 100, 30);
     }
-<span class="fstat-no" title="function not covered" >    defend(</span>) {
-<span class="cstat-no" title="statement not covered" >        this.health += 10;</span>
-    }
-<span class="fstat-no" title="function not covered" >    swordSmash(</span>target: HeroBase) {
-<span class="cstat-no" title="statement not covered" >        target.health -= this.damage * 3;</span>
-<span class="cstat-no" title="statement not covered" >        this.armour -= 5;</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >    specialAttack(</span>target: HeroBase) {
+<span class="cstat-no" title="statement not covered" >        target.health -=this.damage * 2;</span>
     }
 }</pre></td></tr></table></pre>
 

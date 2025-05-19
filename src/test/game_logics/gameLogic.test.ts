@@ -7,9 +7,9 @@ describe('GameLogic test', () => {
         const archer = new Archer('robin_hood');
         const knight = new Knight('lancelot',40);
         archer.attack(knight);
-        expect(knight.health).toEqual(13);
+        console.log(knight.health);
+        expect(knight.health).toBe(170);
     })
 
 });
 
-jest.mock('../../game_logics/heros/knight')

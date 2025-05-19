@@ -1,0 +1,56 @@
+herobase.ts
+export abstract class HeroBase {
+    protected constructor(public name: string, public health: number, public damage: number) {
+    }
+    attack(target: HeroBase) {
+        target.health -= this.damage;
+    }
+}
+
+knight.ts
+import {HeroBase} from "../herobase";
+export class Knight extends HeroBase {
+    constructor(name :string) {
+        super(name, 150, 10);
+    }
+    defend() {
+        this.health += 10;
+    }
+}
+
+archer.ts
+import {HeroBase} from "../herobase";
+
+export class Archer extends HeroBase {
+    constructor(name :string) {
+        super(name, 100, 20);
+    }
+
+    specialAttack(target: HeroBase) {
+        target.health -=this.damage * 2;
+    }
+}
+
+gameLogic.test.ts
+
+import {describe} from "node:test";
+import {Archer} from "../../game_logics/heros/archer";
+import {Knight} from "../../game_logics/heros/knight";
+
+describe('GameLogic test', () => {
+    test('hero can attack each other', () => {
+        const archer = new Archer('robin_hood');
+        const knight = new Knight('lancelot');
+        archer.attack(knight);
+        expect(knight.health).toEqual(130);
+    })
+
+});
+
+jest.config.js
+
+module.exports= {
+    preset : 'ts-jest',
+    testEnvironment: 'node',
+    //testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
+}

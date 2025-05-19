@@ -10,3 +10,9 @@
 # dotenv environment variables files
 .env
 .env.test
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/

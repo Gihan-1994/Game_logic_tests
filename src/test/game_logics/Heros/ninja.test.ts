@@ -25,12 +25,12 @@ describe('Ninja fight with Knight test', () => {
         //expect(mock_Knight.health).toBe(200);
         ninja.assasinate(mock_Knight);
         expect(mock_Knight.health).toEqual(75);
+        console.log('ninjas health',ninja.health);
         expect(ninja.health).toEqual(110);
     })
 
     test('Ninja performs evade',() => {
         ninja.evade();
-        console.log(ninja.health);
         expect(ninja.health).toEqual(115);
     })
 });
